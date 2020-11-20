@@ -1,0 +1,40 @@
+﻿<Window x:Class="OptiekProject_WPF.ProductVenster"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OptiekProject_WPF"
+        mc:Ignorable="d"
+        Title="ProductVenster" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <Border BorderThickness="1" BorderBrush="Black">
+                <StackPanel Orientation="Horizontal" >
+                    <Button Content="Home" Height="30" Width="130" Margin="50,5,5,5"></Button>
+                    <Button Content="Sportbril" Height="30" Width="130" Margin="5"></Button>
+                    <Button Content="Leesbril" Height="30" Width="130" Margin="5"></Button>
+                    <Button Content="Schietbril" Height="30" Width="130" Margin="5"></Button>
+                    <Button Content="Zonnebril" Height="30" Width="130" Margin="5"></Button>
+                </StackPanel>
+            </Border>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Height="190" >
+                <Image Height="190" Width="190"></Image>
+                <StackPanel>
+                    <Label FontSize="30" FontWeight="Bold" HorizontalContentAlignment="Center" Margin="10" Width="580" Content="Naam"></Label>
+                    <StackPanel Orientation="Horizontal" >
+                        <StackPanel>
+                            <CheckBox Content="Aangepaste sterkte" Margin="10"></CheckBox>
+                            <ComboBox Height="25" Margin="5"></ComboBox>
+                        </StackPanel>
+                        
+                        <StackPanel Margin="320,0,0,0">
+                            <TextBox Width="130" Height="25" Margin="5"></TextBox>
+                            <CheckBox Content="Beschikbaarheid" Margin="5"></CheckBox>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+            <TextBlock></TextBlock>
+        </StackPanel>
+    </Grid>
+</Window>

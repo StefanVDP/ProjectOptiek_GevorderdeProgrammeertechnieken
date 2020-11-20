@@ -1,0 +1,27 @@
+﻿<Window x:Class="OptiekProject_WPF.OverzichtSportbril"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OptiekProject_WPF"
+        mc:Ignorable="d"
+        Title="OverzichtSportbril" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <Border BorderThickness="1" BorderBrush="Black">
+                <StackPanel Orientation="Horizontal" >
+                    <Button Content="Home" Height="30" Width="130" Margin="50,5,5,5"></Button>
+                    <Button Content="Sportbril" Height="30" Width="130" Margin="5"></Button>
+                    <Button Content="Leesbril" Height="30" Width="130" Margin="5"></Button>
+                    <Button Content="Schietbril" Height="30" Width="130" Margin="5"></Button>
+                    <Button Content="Zonnebril" Height="30" Width="130" Margin="5"></Button>
+                </StackPanel>
+            </Border>
+            
+            <StackPanel HorizontalAlignment="Left" Height="380" Width="190">
+                <TextBox Height="30"/>
+                <ComboBox Height="30"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
