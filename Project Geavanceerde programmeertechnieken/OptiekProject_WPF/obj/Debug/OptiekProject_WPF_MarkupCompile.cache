@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Gebruiker\Desktop\Project Geavanceerde programmeertechnieken\OptiekProject_WPF\obj\Debug\
+C:\Users\Gebruiker\Documents\GitHub\ProjectOptiek_GevorderdeProgrammeertechnieken\Project Geavanceerde programmeertechnieken\OptiekProject_WPF\obj\Debug\
 OptiekProject_WPF
 none
 false
 DEBUG;TRACE
-C:\Users\Gebruiker\Desktop\Project Geavanceerde programmeertechnieken\OptiekProject_WPF\App.xaml
-2-574651784
+C:\Users\Gebruiker\Documents\GitHub\ProjectOptiek_GevorderdeProgrammeertechnieken\Project Geavanceerde programmeertechnieken\OptiekProject_WPF\App.xaml
+8-606659536
 
-62007311894
-13-1505183044
-MainWindow.xaml;OverzichtSportbril.xaml;
+141877477225
+151324628841
+Views\AdminMainWindow.xaml;Views\BrillenBeheren.xaml;Views\KleurenBeheren.xaml;Views\MainWindow.xaml;Views\ModellenBeheren.xaml;Views\OverzichtProducten.xaml;Views\ProductVenster.xaml;Views\SterkteBeheren.xaml;
 
 False
 

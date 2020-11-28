@@ -55,67 +55,76 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="KleurenBeheren.xaml.cs">
+    <Compile Include="VieuwModels\AdminMainWindowViewModel.cs" />
+    <Compile Include="VieuwModels\BasisViewModel.cs" />
+    <Compile Include="VieuwModels\BrillenBeherenViewModel.cs" />
+    <Compile Include="VieuwModels\KleurenBeherenViewModel.cs" />
+    <Compile Include="VieuwModels\MainWindowViewModel.cs" />
+    <Compile Include="VieuwModels\ModellenBeherenViewModel.cs" />
+    <Compile Include="VieuwModels\OverzichtProductenViewModel.cs" />
+    <Compile Include="VieuwModels\ProductViewModel.cs" />
+    <Compile Include="VieuwModels\SterkteBeherenViewModel.cs" />
+    <Compile Include="Views\KleurenBeheren.xaml.cs">
       <DependentUpon>KleurenBeheren.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SterkteBeheren.xaml.cs">
+    <Compile Include="Views\SterkteBeheren.xaml.cs">
       <DependentUpon>SterkteBeheren.xaml</DependentUpon>
     </Compile>
-    <Page Include="AdminMainWindow.xaml">
+    <Page Include="Views\AdminMainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="BrillenBeheren.xaml">
+    <Page Include="Views\BrillenBeheren.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="KleurenBeheren.xaml">
+    <Page Include="Views\KleurenBeheren.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="AdminMainWindow.xaml.cs">
+    <Compile Include="Views\AdminMainWindow.xaml.cs">
       <DependentUpon>AdminMainWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BrillenBeheren.xaml.cs">
+    <Compile Include="Views\BrillenBeheren.xaml.cs">
       <DependentUpon>BrillenBeheren.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="ModellenBeheren.xaml">
+    <Page Include="Views\ModellenBeheren.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="OverzichtProducten.xaml">
+    <Page Include="Views\OverzichtProducten.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ProductVenster.xaml">
+    <Page Include="Views\ProductVenster.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SterkteBeheren.xaml">
+    <Page Include="Views\SterkteBeheren.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ModellenBeheren.xaml.cs">
+    <Compile Include="Views\ModellenBeheren.xaml.cs">
       <DependentUpon>ModellenBeheren.xaml</DependentUpon>
     </Compile>
-    <Compile Include="OverzichtProducten.xaml.cs">
+    <Compile Include="Views\OverzichtProducten.xaml.cs">
       <DependentUpon>OverzichtProducten.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ProductVenster.xaml.cs">
+    <Compile Include="Views\ProductVenster.xaml.cs">
       <DependentUpon>ProductVenster.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -142,6 +151,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OptiekProject_DAL\OptiekProject_DAL.csproj">
+      <Project>{55c2cba6-a636-4d84-9e64-095251db4a2a}</Project>
+      <Name>OptiekProject_DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
