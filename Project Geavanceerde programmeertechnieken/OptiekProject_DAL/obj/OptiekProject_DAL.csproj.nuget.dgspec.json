@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gebruiker\\Documents\\GitHub\\ProjectOptiek_GevorderdeProgrammeertechnieken\\Project Geavanceerde programmeertechnieken\\OptiekProject_DAL\\OptiekProject_DAL.csproj": {}
+    "C:\\Users\\Gebruiker\\Documents\\GitHub\\ProjectOptiek_GevorderdeProgrammeertechnieken\\Project Geavanceerde programmeertechnieken\\OptiekProject_DAL\\OptiekProject_dal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gebruiker\\Documents\\GitHub\\ProjectOptiek_GevorderdeProgrammeertechnieken\\Project Geavanceerde programmeertechnieken\\OptiekProject_DAL\\OptiekProject_DAL.csproj": {
+    "C:\\Users\\Gebruiker\\Documents\\GitHub\\ProjectOptiek_GevorderdeProgrammeertechnieken\\Project Geavanceerde programmeertechnieken\\OptiekProject_DAL\\OptiekProject_dal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gebruiker\\Documents\\GitHub\\ProjectOptiek_GevorderdeProgrammeertechnieken\\Project Geavanceerde programmeertechnieken\\OptiekProject_DAL\\OptiekProject_DAL.csproj",
-        "projectName": "OptiekProject_DAL",
-        "projectPath": "C:\\Users\\Gebruiker\\Documents\\GitHub\\ProjectOptiek_GevorderdeProgrammeertechnieken\\Project Geavanceerde programmeertechnieken\\OptiekProject_DAL\\OptiekProject_DAL.csproj",
+        "projectUniqueName": "C:\\Users\\Gebruiker\\Documents\\GitHub\\ProjectOptiek_GevorderdeProgrammeertechnieken\\Project Geavanceerde programmeertechnieken\\OptiekProject_DAL\\OptiekProject_dal.csproj",
+        "projectName": "OptiekProject_dal",
+        "projectPath": "C:\\Users\\Gebruiker\\Documents\\GitHub\\ProjectOptiek_GevorderdeProgrammeertechnieken\\Project Geavanceerde programmeertechnieken\\OptiekProject_DAL\\OptiekProject_dal.csproj",
         "packagesPath": "C:\\Users\\Gebruiker\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Gebruiker\\Documents\\GitHub\\ProjectOptiek_GevorderdeProgrammeertechnieken\\Project Geavanceerde programmeertechnieken\\OptiekProject_DAL\\obj\\",
         "projectStyle": "PackageReference",
@@ -38,11 +38,33 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
+            "Fody": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.3.0, )"
+            },
+            "MaterialDesignColors": {
+              "target": "Package",
+              "version": "[1.2.7, )"
+            },
+            "MaterialDesignThemes": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "PropertyChanged.Fody": {
+              "target": "Package",
+              "version": "[3.3.1, )"
             }
           },
           "imports": [

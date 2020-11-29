@@ -1,11 +1,27 @@
 {
   "version": 2,
-  "dgSpecHash": "QnXXcWXsaLSvOpGOViBp+36WaYyyClz4vvfrSPmED43qMWBlNG7NgzbyLfrCzJKMWZaHTt0wKwGqIF++P77log==",
+  "dgSpecHash": "OlfljSPYYnbU70EtlK9SPIEu45ylx+e9p5hLH5buTPXI4Z7Gfj8M8MnAqTxw0TZleTz96xsVwDuV3LdXxfKk6w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Gebruiker\\Documents\\GitHub\\ProjectOptiek_GevorderdeProgrammeertechnieken\\Project Geavanceerde programmeertechnieken\\OptiekProject_DAL\\OptiekProject_DAL.csproj",
+  "projectFilePath": "C:\\Users\\Gebruiker\\Documents\\GitHub\\ProjectOptiek_GevorderdeProgrammeertechnieken\\Project Geavanceerde programmeertechnieken\\OptiekProject_DAL\\OptiekProject_dal.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Gebruiker\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
+    "C:\\Users\\Gebruiker\\.nuget\\packages\\fody\\6.3.0\\fody.6.3.0.nupkg.sha512",
+    "C:\\Users\\Gebruiker\\.nuget\\packages\\materialdesigncolors\\1.2.7\\materialdesigncolors.1.2.7.nupkg.sha512",
+    "C:\\Users\\Gebruiker\\.nuget\\packages\\materialdesignthemes\\3.2.0\\materialdesignthemes.3.2.0.nupkg.sha512",
     "C:\\Users\\Gebruiker\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\Gebruiker\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\Gebruiker\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Gebruiker\\.nuget\\packages\\propertychanged.fody\\3.3.1\\propertychanged.fody.3.3.1.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'MaterialDesignColors 1.2.7' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "MaterialDesignColors",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.0"
+      ]
+    }
+  ]
 }
