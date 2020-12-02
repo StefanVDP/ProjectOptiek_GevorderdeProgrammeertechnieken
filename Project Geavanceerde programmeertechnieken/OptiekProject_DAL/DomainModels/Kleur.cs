@@ -4,7 +4,10 @@ using System.Text;
 
 namespace OptiekProject_DAL.DomainModels
 {
-    class Kleur
+    public class Kleur
     {
+        public int KleurID { get; set;}
+        public string Naam { get; set; }
+        public ICollection<Kleurcombinatie> Kleurcombinaties { get; set; }
     }
 }

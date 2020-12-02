@@ -4,7 +4,10 @@ using System.Text;
 
 namespace OptiekProject_DAL.DomainModels
 {
-    class Sterkte
+    public class Sterkte
     {
+        public int SterkteID { get; set; }
+        public string sterkte { get; set; }
+        public ICollection<Bril> Brillen { get; set; }
     }
 }

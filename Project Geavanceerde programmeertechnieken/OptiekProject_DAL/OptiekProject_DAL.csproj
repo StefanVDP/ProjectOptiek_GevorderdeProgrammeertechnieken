@@ -15,4 +15,10 @@
     <PackageReference Include="PropertyChanged.Fody" Version="3.3.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Data\UnitOfWork\" />
+    <Folder Include="Data\Repositories\" />
+    <Folder Include="partials\" />
+  </ItemGroup>
+
 </Project>

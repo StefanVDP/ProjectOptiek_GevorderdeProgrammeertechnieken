@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OlfljSPYYnbU70EtlK9SPIEu45ylx+e9p5hLH5buTPXI4Z7Gfj8M8MnAqTxw0TZleTz96xsVwDuV3LdXxfKk6w==",
+  "dgSpecHash": "8XFvygaGkU7kHnLL8SxC0i8owC0/DF89WgNjKX9raPkcnS6Jn8EQnApMhU23hTY3wq3XwcmtHE0V6q535C+2VQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Gebruiker\\Documents\\GitHub\\ProjectOptiek_GevorderdeProgrammeertechnieken\\Project Geavanceerde programmeertechnieken\\OptiekProject_DAL\\OptiekProject_dal.csproj",
+  "projectFilePath": "C:\\Users\\Gebruiker\\Documents\\GitHub\\ProjectOptiek_GevorderdeProgrammeertechnieken\\Project Geavanceerde programmeertechnieken\\OptiekProject_DAL\\OptiekProject_DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gebruiker\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\Gebruiker\\.nuget\\packages\\fody\\6.3.0\\fody.6.3.0.nupkg.sha512",
