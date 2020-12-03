@@ -10,11 +10,11 @@
         <StackPanel>
             <Border BorderThickness="1" BorderBrush="Black">
                 <StackPanel Orientation="Horizontal" >
-                    <Button Content="Home" Height="30" Width="130" Margin="50,5,5,5"></Button>
-                    <Button Content="Sportbril" Height="30" Width="130" Margin="5"></Button>
-                    <Button Content="Leesbril" Height="30" Width="130" Margin="5"></Button>
-                    <Button Content="Schietbril" Height="30" Width="130" Margin="5"></Button>
-                    <Button Content="Zonnebril" Height="30" Width="130" Margin="5"></Button>
+                    <Button Content="Home" Height="30" Width="130" Margin="50,5,5,5" Command="{Binding}" CommandParameter="Home"></Button>
+                    <Button Content="Sportbril" Height="30" Width="130" Margin="5" Command="{Binding}" CommandParameter="Sportbril"></Button>
+                    <Button Content="Leesbril" Height="30" Width="130" Margin="5" Command="{Binding}" CommandParameter="Leesbril"></Button>
+                    <Button Content="Schietbril" Height="30" Width="130" Margin="5" Command="{Binding}" CommandParameter="Schietbril"></Button>
+                    <Button Content="Zonnebril" Height="30" Width="130" Margin="5" Command="{Binding}" CommandParameter="Zonnebril"></Button>
                 </StackPanel>
             </Border>
             <StackPanel HorizontalAlignment="Left" Height="380" Width="140">
@@ -22,7 +22,7 @@
                 <TextBox Height="35" Width="130" Margin="5"/>
                 <ComboBox Height="30" Margin="5"/>
                 <ScrollViewer Height="180" Margin="5"></ScrollViewer>
-                <Button Content="Bril aanmaken" Height="40" Width="130" Margin="5,10,5,10"></Button>
+                <Button Content="Bril aanmaken" Height="40" Width="130" Margin="5,10,5,10" Command="{Binding}" CommandParameter="BrilAanmaken"></Button>
             </StackPanel>
         </StackPanel>
     </Grid>

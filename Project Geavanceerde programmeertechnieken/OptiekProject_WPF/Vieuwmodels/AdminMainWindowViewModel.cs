@@ -32,6 +32,56 @@ namespace OptiekProject_WPF.VieuwModels
                     mainwindow.DataContext = MainViewModel;
                     mainwindow.Show();
                     break;
+                case "Sportbril":
+                    OverzichtSportbril SportbrillenWindow = new OverzichtSportbril();
+                    MainWindowViewModel SportbrillenViewModel = new MainWindowViewModel();
+                    SportbrillenWindow.DataContext = SportbrillenViewModel;
+                    SportbrillenWindow.Show();
+                    break;
+                case "Leesbril":
+                    OverzichtSportbril LeesbrillenWindow = new OverzichtSportbril();
+                    MainWindowViewModel LeesbrillenViewModel = new MainWindowViewModel();
+                    LeesbrillenWindow.DataContext = LeesbrillenViewModel;
+                    LeesbrillenWindow.Show();
+                    break;
+                case "Schietbril":
+                    OverzichtSportbril SchietbrillenWindow = new OverzichtSportbril();
+                    MainWindowViewModel SchietbrillenViewModel = new MainWindowViewModel();
+                    SchietbrillenWindow.DataContext = SchietbrillenViewModel;
+                    SchietbrillenWindow.Show();
+                    break;
+                case "Zonnebril":
+                    OverzichtSportbril ZonnebrillenWindow = new OverzichtSportbril();
+                    MainWindowViewModel ZonnebrillenViewModel = new MainWindowViewModel();
+                    ZonnebrillenWindow.DataContext = ZonnebrillenViewModel;
+                    ZonnebrillenWindow.Show();
+                    break;
+
+
+                case "BrilAanmaken":
+                    BrillenBeheren BrillenbeherenWindow = new BrillenBeheren();
+                    BrillenBeherenViewModel BrillenbeherenViewModel = new BrillenBeherenViewModel();
+                    BrillenbeherenWindow.DataContext = BrillenbeherenViewModel;
+                    BrillenbeherenWindow.Show();
+                    break;
+                case "ModelAanmaken":
+                    ModellenBeheren ModellenbeherebWindow = new ModellenBeheren();
+                    ModellenBeherenViewModel ModellenbehereViewModel = new ModellenBeherenViewModel();
+                    ModellenbeherebWindow.DataContext = ModellenbehereViewModel;
+                    ModellenbeherebWindow.Show();
+                    break;
+                case "SterkteBeheren":
+                    SterkteBeheren SterktebeherenWindow = new SterkteBeheren();
+                    SterkteBeherenViewModel SterktebeherenViewModel = new SterkteBeherenViewModel();
+                    SterktebeherenWindow.DataContext = SterktebeherenViewModel;
+                    SterktebeherenWindow.Show();
+                    break;
+                case "KleurenBeheren":
+                    KleurenBeheren KleurenbeherenWindow = new KleurenBeheren();
+                    KleurenBeherenViewModel KleurenbeherenViewModel = new KleurenBeherenViewModel();
+                    KleurenbeherenWindow.DataContext = KleurenbeherenViewModel;
+                    KleurenbeherenWindow.Show();
+                    break;
 
             }
         }

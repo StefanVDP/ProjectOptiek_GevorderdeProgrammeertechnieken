@@ -9,6 +9,11 @@ namespace OptiekProject_DAL
 {
     class OptiekDbContext: DbContext
     {
+        public OptiekDbContext(): base ("BrilbeheerDB") 
+        { 
+        
+        }
+
         public DbSet<Bril> Brillen { get; set; }
         public DbSet<BrilType> BrilTypes { get; set; }
         public DbSet<Kleur> Kleuren { get; set; }

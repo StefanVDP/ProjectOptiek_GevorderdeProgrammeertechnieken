@@ -6,6 +6,7 @@ using System.Linq;
 using System.Security;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace OptiekProject_WPF.VieuwModels
 {
@@ -31,6 +32,30 @@ namespace OptiekProject_WPF.VieuwModels
                     MainWindowViewModel MainViewModel = new MainWindowViewModel();
                     mainwindow.DataContext = MainViewModel;
                     mainwindow.Show();
+                    break;
+                case "Sportbril":
+                    OverzichtSportbril SportbrillenWindow = new OverzichtSportbril();
+                    MainWindowViewModel SportbrillenViewModel = new MainWindowViewModel();
+                    SportbrillenWindow.DataContext = SportbrillenViewModel;
+                    SportbrillenWindow.Show();
+                    break;
+                case "Leesbril":
+                    OverzichtSportbril LeesbrillenWindow = new OverzichtSportbril();
+                    MainWindowViewModel LeesbrillenViewModel = new MainWindowViewModel();
+                    LeesbrillenWindow.DataContext = LeesbrillenViewModel;
+                    LeesbrillenWindow.Show();
+                    break;
+                case "Schietbril":
+                    OverzichtSportbril SchietbrillenWindow = new OverzichtSportbril();
+                    MainWindowViewModel SchietbrillenViewModel = new MainWindowViewModel();
+                    SchietbrillenWindow.DataContext = SchietbrillenViewModel;
+                    SchietbrillenWindow.Show();
+                    break;
+                case "Zonnebril":
+                    OverzichtSportbril ZonnebrillenWindow = new OverzichtSportbril();
+                    MainWindowViewModel ZonnebrillenViewModel = new MainWindowViewModel();
+                    ZonnebrillenWindow.DataContext = ZonnebrillenViewModel;
+                    ZonnebrillenWindow.Show();
                     break;
 
             }

@@ -26,13 +26,9 @@ namespace OptiekProject_WPF.VieuwModels
         {
             switch (parameter.ToString())
             {
-                case "Home":
-                    MainWindow mainwindow = new MainWindow();
-                    MainWindowViewModel MainViewModel = new MainWindowViewModel();
-                    mainwindow.DataContext = MainViewModel;
-                    mainwindow.Show();
+                case "SterkteAanmaken":
+                    //Nieuwe sterkte aanmaken
                     break;
-
             }
         }
     }

@@ -11,7 +11,7 @@
             <StackPanel HorizontalAlignment="Left" Height="380" Width="130">
                 <TextBox Height="35" Width="110" Margin="10"/>
                 <TextBox Height="35" Width="110" Margin="10"/>
-                <Button Content="aanmaken" Height="70" Width="120" Margin="5,10,5,10"></Button>
+                <Button Content="aanmaken" Height="70" Width="120" Margin="5,10,5,10" Command="{Binding}" CommandParameter="SterkteAanmaken"></Button>
             </StackPanel>
         </StackPanel>
     </Grid>

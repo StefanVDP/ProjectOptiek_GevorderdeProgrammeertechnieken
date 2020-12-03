@@ -10,11 +10,11 @@
         <StackPanel>
             <Border BorderThickness="1" BorderBrush="Black">
                 <StackPanel Orientation="Horizontal" >
-                    <Button Content="Home" Height="30" Width="130" Margin="50,5,5,5"></Button>
-                    <Button Content="Sportbril" Height="30" Width="130" Margin="5"></Button>
-                    <Button Content="Leesbril" Height="30" Width="130" Margin="5"></Button>
-                    <Button Content="Schietbril" Height="30" Width="130" Margin="5"></Button>
-                    <Button Content="Zonnebril" Height="30" Width="130" Margin="5"></Button>
+                    <Button Content="Home" Height="30" Width="130" Margin="50,5,5,5" Command="{Binding}" CommandParameter="Home"></Button>
+                    <Button Content="Sportbril" Height="30" Width="130" Margin="5" Command="{Binding}" CommandParameter="Sportbril"></Button>
+                    <Button Content="Leesbril" Height="30" Width="130" Margin="5" Command="{Binding}" CommandParameter="Leesbril"></Button>
+                    <Button Content="Schietbril" Height="30" Width="130" Margin="5" Command="{Binding}" CommandParameter="Schietbril"></Button>
+                    <Button Content="Zonnebril" Height="30" Width="130" Margin="5" Command="{Binding}" CommandParameter="Zonnebril"></Button>
                 </StackPanel>
             </Border>
             

@@ -32,6 +32,30 @@ namespace OptiekProject_WPF.VieuwModels
                     mainwindow.DataContext = MainViewModel;
                     mainwindow.Show();
                     break;
+                case "Sportbril":
+                    OverzichtSportbril SportbrillenWindow = new OverzichtSportbril();
+                    MainWindowViewModel SportbrillenViewModel = new MainWindowViewModel();
+                    SportbrillenWindow.DataContext = SportbrillenViewModel;
+                    SportbrillenWindow.Show();
+                    break;
+                case "Leesbril":
+                    OverzichtSportbril LeesbrillenWindow = new OverzichtSportbril();
+                    MainWindowViewModel LeesbrillenViewModel = new MainWindowViewModel();
+                    LeesbrillenWindow.DataContext = LeesbrillenViewModel;
+                    LeesbrillenWindow.Show();
+                    break;
+                case "Schietbril":
+                    OverzichtSportbril SchietbrillenWindow = new OverzichtSportbril();
+                    MainWindowViewModel SchietbrillenViewModel = new MainWindowViewModel();
+                    SchietbrillenWindow.DataContext = SchietbrillenViewModel;
+                    SchietbrillenWindow.Show();
+                    break;
+                case "Zonnebril":
+                    OverzichtSportbril ZonnebrillenWindow = new OverzichtSportbril();
+                    MainWindowViewModel ZonnebrillenViewModel = new MainWindowViewModel();
+                    ZonnebrillenWindow.DataContext = ZonnebrillenViewModel;
+                    ZonnebrillenWindow.Show();
+                    break;
 
             }
         }
