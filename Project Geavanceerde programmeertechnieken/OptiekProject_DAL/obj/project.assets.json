@@ -398,9 +398,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gebruiker\\Documents\\GitHub\\ProjectOptiek_GevorderdeProgrammeertechnieken\\Project Geavanceerde programmeertechnieken\\OptiekProject_DAL\\OptiekProject_DAL.csproj",
-      "projectName": "OptiekProject_DAL",
-      "projectPath": "C:\\Users\\Gebruiker\\Documents\\GitHub\\ProjectOptiek_GevorderdeProgrammeertechnieken\\Project Geavanceerde programmeertechnieken\\OptiekProject_DAL\\OptiekProject_DAL.csproj",
+      "projectUniqueName": "C:\\Users\\Gebruiker\\Documents\\GitHub\\ProjectOptiek_GevorderdeProgrammeertechnieken\\Project Geavanceerde programmeertechnieken\\OptiekProject_DAL\\OptiekProject_DA.csproj",
+      "projectName": "OptiekProject_DA",
+      "projectPath": "C:\\Users\\Gebruiker\\Documents\\GitHub\\ProjectOptiek_GevorderdeProgrammeertechnieken\\Project Geavanceerde programmeertechnieken\\OptiekProject_DAL\\OptiekProject_DA.csproj",
       "packagesPath": "C:\\Users\\Gebruiker\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Gebruiker\\Documents\\GitHub\\ProjectOptiek_GevorderdeProgrammeertechnieken\\Project Geavanceerde programmeertechnieken\\OptiekProject_DAL\\obj\\",
       "projectStyle": "PackageReference",

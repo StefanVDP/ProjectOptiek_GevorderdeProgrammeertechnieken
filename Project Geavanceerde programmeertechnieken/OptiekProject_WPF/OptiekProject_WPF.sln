@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OptiekProject_WPF", "OptiekProject_WPF.csproj", "{F6B8CC99-D8E8-4125-97C4-CAB9FE4E95B9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OptiekProject_DAL", "..\OptiekProject_DAL\OptiekProject_DAL.csproj", "{55C2CBA6-A636-4D84-9E64-095251DB4A2A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OptiekProject_DAL", "..\OptiekProject_D\OptiekProject_DAL.csproj", "{6530E59E-20F6-4FAF-A80C-A44B9F97E8B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{F6B8CC99-D8E8-4125-97C4-CAB9FE4E95B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6B8CC99-D8E8-4125-97C4-CAB9FE4E95B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6B8CC99-D8E8-4125-97C4-CAB9FE4E95B9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{55C2CBA6-A636-4D84-9E64-095251DB4A2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{55C2CBA6-A636-4D84-9E64-095251DB4A2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{55C2CBA6-A636-4D84-9E64-095251DB4A2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{55C2CBA6-A636-4D84-9E64-095251DB4A2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6530E59E-20F6-4FAF-A80C-A44B9F97E8B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6530E59E-20F6-4FAF-A80C-A44B9F97E8B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6530E59E-20F6-4FAF-A80C-A44B9F97E8B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6530E59E-20F6-4FAF-A80C-A44B9F97E8B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
