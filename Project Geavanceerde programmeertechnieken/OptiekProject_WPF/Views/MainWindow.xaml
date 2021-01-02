@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OptiekProject_WPF"
         mc:Ignorable="d"
+        x:Name="StartWindow"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <StackPanel>
@@ -18,7 +19,7 @@
             </StackPanel>
             </Border>
             <Image Height="150"/>
-            <TextBlock Height="230"></TextBlock>
+            <TextBlock Height="230" FontSize="20" TextWrapping="Wrap" Padding="10">Een professionele aanpak, bijzondere monturencollecties, comfortabele contactlenzen en deskundig advies over de nieuwste brillenglazen. Deze service en garantie vinden we belangrijk want uw ogen zijn onze zorg.</TextBlock>
         </StackPanel>
     </Grid>
 </Window>

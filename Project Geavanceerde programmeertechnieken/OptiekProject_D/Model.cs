@@ -1,4 +1,5 @@
 ﻿using System;
+using OptiekProject_DAL.BasisModel;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -9,12 +10,22 @@ using System.Threading.Tasks;
 namespace OptiekProject_DAL
 {
     [Table("Modellen")]
-    public class Model
+    public class Model : Basisklasse
     {
         public int ModelID { get; set; }
 
+        public decimal Prijs { get; set; }
+
         [Required]
+        [MaxLength(150)]
         public string Naam { get; set; }
+
+        [MaxLength(5000)]
+        public string Omschrijving { get; set; }
+
+        [Required]
+        public int BriltypeID { get; set; }
+        public BrilType BrilTypes { get; set; }
 
         [Required]
         public int MerkID { get; set; }

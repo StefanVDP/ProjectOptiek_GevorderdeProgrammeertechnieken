@@ -5,13 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OptiekProject_WPF"
         mc:Ignorable="d"
+        x:Name="KleurBeheerWindow"
         Title="KleurenBeheren" Height="225" Width="400">
     <Grid>
         <StackPanel Orientation="Horizontal">
             <StackPanel HorizontalAlignment="Left" Height="380" Width="130">
-                <TextBox Height="50" Width="110" Margin="10,30,10,10"/>
-                <Button Content="aanmaken" Height="70" Width="120" Margin="5,10,5,10" Command="{Binding}" CommandParameter="Aanmaken"></Button>
+                <Label Content="kleur:" Margin="5,0" ></Label>
+                <TextBox Height="20" Width="110" Margin="10,10,10,10" Text="{Binding KleurText}"/>
+                <Label HorizontalAlignment="Center" Content="{Binding SelecteerdeKleur}"></Label>
+                <Button Content="Edit" Height="20" Width="100" Margin="5,5,5,5" Command="{Binding}" CommandParameter="KleurEdit" IsEnabled="{Binding SelectieIsTrue}" Visibility="{Binding SelectieIsTrueVisibility}"></Button>
+                <Button Content="Verwijderen" Height="20" Width="100" Margin="5,0,5,5" Command="{Binding}" CommandParameter="KleurDeleten" IsEnabled="{Binding SelectieIsTrue}" Visibility="{Binding SelectieIsTrueVisibility}"></Button>
+                <Button Content="cancel" Height="20" Width="100" Margin="5,0,5,0" Command="{Binding}" CommandParameter="SelectieCancel"  IsEnabled="{Binding SelectieIsTrue}" Visibility="{Binding SelectieIsTrueVisibility}"></Button>
+                <Button Content="aanmaken" Height="30" Width="120" Margin="5,10,5,10" Command="{Binding}" CommandParameter="Aanmaken" IsEnabled="{Binding SelectieIsFalse}"></Button>
             </StackPanel>
+            <Grid>
+                <DataGrid x:Name="dataGrid" ItemsSource="{Binding Kleuren}" SelectedItem="{Binding SelectedKleurClass}" Width="260" AutoGenerateColumns="False">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Binding="{Binding Naam}" Header="kleur" Width="100"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
         </StackPanel>
     </Grid>
 </Window>

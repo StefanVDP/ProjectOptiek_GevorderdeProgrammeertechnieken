@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace OptiekProject_DAL
 {
-    class OptiekDbContext: DbContext
+    public class OptiekDbContext: DbContext
     {
-        public OptiekDbContext(): base ("BrilbeheerDB") 
+        public OptiekDbContext(): base ("name=BrilbeheerDBConnectionString") 
         { 
         
         }
@@ -21,5 +21,7 @@ namespace OptiekProject_DAL
         public DbSet<Merk> Merken { get; set; }
         public DbSet<Model> Modellen { get; set; }
         public DbSet<Sterkte> Sterkten { get; set; }
+        public DbSet<Gebruiker> GPGebruikers { get; set; }
+        public DbSet<GebruikerType> GebruikerTypes { get; set; }
     }
 }

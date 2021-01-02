@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OptiekProject_WPF"
         mc:Ignorable="d"
+        x:Name="ProductWindow"
         Title="ProductVenster" Height="450" Width="800">
     <Grid>
         <StackPanel>
@@ -20,21 +21,23 @@
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Height="190" >
                 <Image Height="190" Width="190"></Image>
                 <StackPanel>
-                    <Label FontSize="30" FontWeight="Bold" HorizontalContentAlignment="Center" Margin="10" Width="580" Content="Naam"></Label>
+                    <Label FontSize="30" FontWeight="Bold" HorizontalContentAlignment="Center" Margin="10" Width="580" Content="{Binding Productnaam}"></Label>
                     <StackPanel Orientation="Horizontal" >
                         <StackPanel>
-                            <CheckBox Content="Aangepaste sterkte" Margin="10"></CheckBox>
-                            <ComboBox Height="25" Margin="5"></ComboBox>
+                            <CheckBox Content="Aangepaste sterkte" IsChecked="{Binding AangepasteSterkteBool}"  Margin="10"></CheckBox>
+                            <ComboBox Height="25" Margin="5" DisplayMemberPath="Sterkte.sterkte" IsEnabled="{Binding AangepasteSterkteBool}" ItemsSource="{Binding Sterktes}" SelectedItem="{Binding Geselecteerdebril}"></ComboBox>
                         </StackPanel>
                         
                         <StackPanel Margin="320,0,0,0">
-                            <TextBox Width="130" Height="25" Margin="5"></TextBox>
-                            <CheckBox Content="Beschikbaarheid" Margin="5"></CheckBox>
+                            <TextBox Width="130" Height="25" Margin="5" Text="{Binding prijs}"></TextBox>
+                            <Label Margin="5" Content="{Binding Beschikbaar}"></Label>
+                            <CheckBox Content="Beschikbaarheid" IsChecked="{Binding Geselecteerdebril.Beschikbaar}" Margin="5" IsEnabled="False"></CheckBox>
                         </StackPanel>
                     </StackPanel>
                 </StackPanel>
             </StackPanel>
-            <TextBlock></TextBlock>
+            <TextBlock  FontSize="20" Margin="10" HorizontalAlignment="Center" TextWrapping="Wrap" Width="580" Text="{Binding ProductOmschrijving}"></TextBlock>
+            
         </StackPanel>
     </Grid>
 </Window>

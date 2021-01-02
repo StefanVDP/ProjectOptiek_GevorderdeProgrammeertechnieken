@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OptiekProject_WPF"
         mc:Ignorable="d"
+        x:Name="AdminWindow"
         Title="AdminMainWindow" Height="450" Width="800">
     <Grid>
         <StackPanel>
@@ -17,13 +18,28 @@
                     <Button Content="Zonnebril" Height="30" Width="130" Margin="5" Command="{Binding}" CommandParameter="Zonnebril"></Button>
                 </StackPanel>
             </Border>
-            <StackPanel HorizontalAlignment="Left" Height="380" Width="140">
-                <TextBox Height="40" Width="130" Margin="5"/>
-                <Button Content="Bril aanmaken" Height="50" Width="130" Margin="5,10,5,10" Command="{Binding}" CommandParameter="BrilAanmaken"></Button>
-                <Button Content="Model aanmaken" Height="50" Width="130" Margin="5,10,5,10" Command="{Binding}" CommandParameter="ModelAanmaken"></Button>
-                <Button Content="Sterkte beheren" Height="50" Width="130" Margin="5,10,5,10" Command="{Binding}" CommandParameter="SterkteBeheren"></Button>
-                <Button Content="Kleuren beheren" Height="50" Width="130" Margin="5,10,5,10" Command="{Binding}" CommandParameter="KleurenBeheren"></Button>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel HorizontalAlignment="Left" Height="380" Width="140">
+                    <TextBox Height="40" Width="130" Margin="5" Text="{Binding Textfilter}"/>
+                    <ComboBox SelectedItem="{Binding Merkfilter}" DisplayMemberPath="Naam" ItemsSource="{Binding Merken}" Height="30" Margin="5,0,5,10"/>
+                    <Label HorizontalAlignment="Center" Content="{Binding SelecteerdeBril}"></Label>
+                    <Button Content="Verwijderen" Height="20" Width="100" Margin="5,10,5,10" Command="{Binding}" CommandParameter="ModelDeleten"></Button>
+                    <Button Content="Brillen aanpassen" Height="35" Width="130" Margin="5,10,5,10" Command="{Binding}" CommandParameter="BrilAanmaken"></Button>
+                    <Button Content="Model aanmaken" Height="35" Width="130" Margin="5,10,5,10" Command="{Binding}" CommandParameter="ModelAanmaken"></Button>
+                    <Button Content="Sterkte beheren" Height="35" Width="130" Margin="5,10,5,10" Command="{Binding}" CommandParameter="SterkteBeheren"></Button>
+                    <Button Content="Kleuren beheren" Height="35" Width="130" Margin="5,10,5,10" Command="{Binding}" CommandParameter="KleurenBeheren"></Button>
+                </StackPanel>
+                <Grid Height="375" Width="650">
+                    <DataGrid ItemsSource="{Binding Modellen}" SelectedItem="{Binding SelectedModel}" AutoGenerateColumns="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding Naam}" Header="Naam"/>
+                            <DataGridTextColumn Binding="{Binding Prijs}" Header="Prijs Model"/>
+                            <DataGridTextColumn Binding="{Binding Omschrijving}" Header="Omschrijving"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
             </StackPanel>
+            
         </StackPanel>
     </Grid>
 </Window>

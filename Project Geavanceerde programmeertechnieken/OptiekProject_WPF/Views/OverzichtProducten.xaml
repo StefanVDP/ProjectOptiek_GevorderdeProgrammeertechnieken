@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OptiekProject_WPF"
         mc:Ignorable="d"
-        Title="OverzichtSportbril" Height="450" Width="800">
+        x:Name="ProductOverzichtWindow"
+        Title="Overzicht" Height="450" Width="800">
     <Grid>
         <StackPanel>
             <Border BorderThickness="1" BorderBrush="Black">
@@ -17,11 +18,22 @@
                     <Button Content="Zonnebril" Height="30" Width="130" Margin="5" Command="{Binding}" CommandParameter="Zonnebril"></Button>
                 </StackPanel>
             </Border>
-            
-            <StackPanel HorizontalAlignment="Left" Height="380" Width="190">
-                <TextBox Height="30"/>
-                <ComboBox Height="30"/>
+            <StackPanel Orientation="Horizontal" >
+                <StackPanel HorizontalAlignment="Left" Height="380" Width="190">
+                    <TextBox Height="30" Text="{Binding Textfilter}"/>
+                    <ComboBox Height="30" SelectedItem="{Binding Merkfilter}" DisplayMemberPath="Naam" ItemsSource="{Binding Merken}"/>
+                </StackPanel>
+                <Grid Height="380">
+                    <DataGrid x:Name="dgdOverzicht" ItemsSource="{Binding Modellen}" Width="550" AutoGenerateColumns="false" IsReadOnly="True" SelectedItem="{Binding SelectedModel}" Margin="20" >
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding Naam}" Header="Naam"/>
+                            <DataGridTextColumn Binding="{Binding Prijs}" Header="Prijs Model"/>
+                            <DataGridTextColumn Binding="{Binding Omschrijving}" Header="Omschrijving"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
             </StackPanel>
+            
         </StackPanel>
     </Grid>
 </Window>

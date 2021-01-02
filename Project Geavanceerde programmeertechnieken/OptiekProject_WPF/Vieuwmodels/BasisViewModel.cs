@@ -6,6 +6,8 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using GalaSoft.MvvmLight.Command;
+using System.Windows;
 
 namespace OptiekProject_WPF.VieuwModels
 {
@@ -27,13 +29,7 @@ namespace OptiekProject_WPF.VieuwModels
         #region INotifyPropertyChanged
         public event PropertyChangedEventHandler PropertyChanged;
 
-        // Deze methode wordt opgeroepen in de setter van elke property.  
-        // [CallerMemberName Attribute]  is nieuw in NET Framework 4.5.   
-        // Dit attribuut zorgt automatisch voor bepalen van de calling propertyName! 
-        // Laat toe om bij de properties NotifyPropertyChanged() op te roepen ipv
-        // OnPropertyChanged("naam property")
-        // PropertyChanged?.Invoke(…)
-        // => if (PropertyChanged != null) {PropertyChanged.Invoke(); }
+        
         protected void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
@@ -66,5 +62,20 @@ namespace OptiekProject_WPF.VieuwModels
             return string.IsNullOrWhiteSpace(Error);
         }
         #endregion
+        public BasisViewModel()
+        {
+            this.CloseWindowCommand = new RelayCommand<Window>(this.CloseWindow);
+        }
+
+        public RelayCommand<Window> CloseWindowCommand { get; private set; }
+
+
+        public void CloseWindow(Window window)
+        {
+            if (window != null)
+            {
+                window.Close();
+            }
+        }
     }
 }

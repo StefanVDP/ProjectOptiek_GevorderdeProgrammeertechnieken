@@ -1,4 +1,6 @@
 ﻿using OptiekProject_DAL;
+using OptiekProject_DAL.Data;
+using OptiekProject_DAL.Data.UnitOfWork;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -7,6 +9,7 @@ using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Data;
 
 namespace OptiekProject_WPF.VieuwModels
 {
@@ -24,39 +27,51 @@ namespace OptiekProject_WPF.VieuwModels
         {
             return true;
         }
+        public Window window { get; set; }
+        public MainWindowViewModel (Window Mainview)
+        {
+            window = Mainview;
+
+
+        }
         public override void Execute(object parameter)
         {
             switch (parameter.ToString())
             {
                 case "Home":
                     MainWindow mainwindow = new MainWindow();
-                    MainWindowViewModel MainViewModel = new MainWindowViewModel();
+                    MainWindowViewModel MainViewModel = new MainWindowViewModel(mainwindow);
                     mainwindow.DataContext = MainViewModel;
                     mainwindow.Show();
+                    CloseWindow(window);
                     break;
                 case "Sportbril":
                     OverzichtSportbril SportbrillenWindow = new OverzichtSportbril();
-                    MainWindowViewModel SportbrillenViewModel = new MainWindowViewModel();
+                    OverzichtProductenViewModel SportbrillenViewModel = new OverzichtProductenViewModel(SportbrillenWindow, 1);
                     SportbrillenWindow.DataContext = SportbrillenViewModel;
                     SportbrillenWindow.Show();
+                    CloseWindow(window);
                     break;
                 case "Leesbril":
                     OverzichtSportbril LeesbrillenWindow = new OverzichtSportbril();
-                    MainWindowViewModel LeesbrillenViewModel = new MainWindowViewModel();
+                    OverzichtProductenViewModel LeesbrillenViewModel = new OverzichtProductenViewModel(LeesbrillenWindow, 2);
                     LeesbrillenWindow.DataContext = LeesbrillenViewModel;
                     LeesbrillenWindow.Show();
+                    CloseWindow(window);
                     break;
                 case "Schietbril":
                     OverzichtSportbril SchietbrillenWindow = new OverzichtSportbril();
-                    MainWindowViewModel SchietbrillenViewModel = new MainWindowViewModel();
+                    OverzichtProductenViewModel SchietbrillenViewModel = new OverzichtProductenViewModel(SchietbrillenWindow, 3);
                     SchietbrillenWindow.DataContext = SchietbrillenViewModel;
                     SchietbrillenWindow.Show();
+                    CloseWindow(window);
                     break;
                 case "Zonnebril":
                     OverzichtSportbril ZonnebrillenWindow = new OverzichtSportbril();
-                    MainWindowViewModel ZonnebrillenViewModel = new MainWindowViewModel();
+                    OverzichtProductenViewModel ZonnebrillenViewModel = new OverzichtProductenViewModel(ZonnebrillenWindow, 4);
                     ZonnebrillenWindow.DataContext = ZonnebrillenViewModel;
                     ZonnebrillenWindow.Show();
+                    CloseWindow(window);
                     break;
 
             }

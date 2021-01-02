@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OptiekProject_WPF"
         mc:Ignorable="d"
+        x:Name="BrillenBeheerWindow"
         Title="BrillenBeheren" Height="450" Width="800">
     <Grid>
         <StackPanel>
@@ -17,16 +18,35 @@
                     <Button Content="Zonnebril" Height="30" Width="130" Margin="5" Command="{Binding}" CommandParameter="Zonnebril"></Button>
                 </StackPanel>
             </Border>
-            <StackPanel HorizontalAlignment="Left" Height="380" Width="140">
-                <TextBox Height="35" Width="130" Margin="5"/>
-                <TextBox Height="35" Width="130" Margin="5"/>
-                <ComboBox Height="30" Margin="5"/>
-                <ComboBox Height="30" Margin="5"/>
-                <TextBox Height="35" Width="130" Margin="5"/>
-                <CheckBox Content="Beschikbaar" Margin="10"></CheckBox>
-                <ScrollViewer Height="60" Margin="5"></ScrollViewer>
-                <Button Content="Bril aanmaken" Height="40" Width="130" Margin="5,10,5,10" Command="{Binding}" CommandParameter="BrilAanmaken"></Button>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel HorizontalAlignment="Left" Height="380" Width="140">
+                    <Button Content="Terug" Height="20" Width="120" Margin="5,5,5,0" Command="{Binding}" CommandParameter="Terug"></Button>
+                    <ComboBox Height="20" Width="120" Margin="0,5,5,0" SelectedItem="{Binding Modelfilter}" DisplayMemberPath="Naam" ItemsSource="{Binding Modellen}"/>
+                    <Label Content="Naam:" Margin="5,0"></Label>
+                    <TextBox Height="25" Width="130" Margin="5,0" Text="{Binding NaamText}"/>
+                    <Label Content="Model:" Margin="5,0"></Label>
+                    <TextBox Height="25" Width="130" Margin="5,0" IsEnabled="False" Text="{Binding ModelText}"/>
+                    <Label Content="Sterkte:" Margin="5,0"></Label>
+                    <TextBox Height="25" Width="130" Margin="5,0" IsEnabled="False" Text="{Binding SterkteText}"/>
+                    <Label Content="Korting:" Margin="5,0"></Label>
+                    <TextBox Height="25" Width="130" Margin="5" Text="{Binding KortingText}"/>
+                    <CheckBox Content="Beschikbaar" Margin="5" IsChecked="{Binding Beschikbaarheid}"></CheckBox>
+                    <Label HorizontalAlignment="Center" Content="{Binding SelecteerdeBril}"></Label>
+                    <Button Content="Bril aanpassen" Height="20" Width="130" Margin="5,10,5,10" Command="{Binding}" CommandParameter="BrilAanpassen"></Button>
+                </StackPanel>
+                <Grid Width="650" Height="370">
+                    <DataGrid ItemsSource="{Binding Brillen}" SelectedItem="{Binding SelectedBrilClass}"  AutoGenerateColumns="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding Naam}" Header="Naam"/>
+                            <DataGridTextColumn Binding="{Binding Korting}" Header="korting"/>
+                            <DataGridTextColumn Binding="{Binding Model.Naam}" Header="Model"/>
+                            <DataGridTextColumn Binding="{Binding Sterkte.sterkte}" Header="Sterkte"/>
+                            <DataGridTextColumn Binding="{Binding Beschikbaar}" Header="Is Beschikbaar"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
             </StackPanel>
+            
         </StackPanel>
         
     </Grid>
