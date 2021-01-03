@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:OptiekProject_WPF"
         mc:Ignorable="d"
         x:Name="ModelBeheerWindow"
-        Title="ModellenBeheren" Height="450" Width="800">
+        Title="ModellenBeheren" Height="510" Width="800">
     <Grid>
         <StackPanel>
             <Border BorderThickness="1" BorderBrush="Black">
@@ -19,13 +19,15 @@
                 </StackPanel>
             </Border>
             <StackPanel Orientation="Horizontal">
-                <StackPanel HorizontalAlignment="Left" Height="380" Width="140">
+                <StackPanel HorizontalAlignment="Left" Height="430" Width="140">
                     <Button Content="Terug" Height="25" Width="120" Margin="5,10,5,10" Command="{Binding}" CommandParameter="Terug"></Button>
                     <Label Content="Naam:" Margin="5,0"></Label>
                     <TextBox Height="25" Width="130" Margin="5" Text="{Binding NaamText}"/>
                     <Label Content="Prijs:" Margin="5,0"></Label>
                     <TextBox Height="25" Width="130" Margin="5" Text="{Binding prijsText}"/>
+                    <Label Content="Merk:" Margin="5,0"></Label>
                     <ComboBox Height="25" DisplayMemberPath="Naam" Margin="5" ItemsSource="{Binding Merken}" SelectedItem="{Binding GeselecteerdeMerk}"/>
+                    <Label Content="Briltype:" Margin="5,0"></Label>
                     <ComboBox Height="25" DisplayMemberPath="Naam" Margin="5" ItemsSource="{Binding Briltypes}" SelectedItem="{Binding GeselecteerdeBriltype}"/>
                     <Label HorizontalAlignment="Center" Content="{Binding SelecteerdeModel}"></Label>
                     <Button Content="Edit" Height="20" Width="100" Margin="5,5,5,5" Command="{Binding}" CommandParameter="ModelEdit" IsEnabled="{Binding SelectieIsTrue}" Visibility="{Binding SelectieIsTrueVisibility}"></Button>
@@ -33,8 +35,8 @@
                     <Button Content="cancel" Height="20" Width="100" Margin="5,0,5,0" Command="{Binding}" CommandParameter="SelectieCancel"  IsEnabled="{Binding SelectieIsTrue}" Visibility="{Binding SelectieIsTrueVisibility}"></Button>
                     <Button Content="Model aanmaken" Height="25" Width="130" Margin="5,10,5,10" Command="{Binding}" CommandParameter="ModelAanmaken" IsEnabled="{Binding SelectieIsFalse}"></Button>
                 </StackPanel>
-                <Grid>
-                    <DataGrid ItemsSource="{Binding Modellen}" SelectedItem="{Binding SelectedModelClass}" Width="650" AutoGenerateColumns="False">
+                <Grid Height="420" Margin="5">
+                    <DataGrid ItemsSource="{Binding Modellen}" SelectedItem="{Binding SelectedModelClass}" Width="640" AutoGenerateColumns="False">
                             <DataGrid.Columns>
                                 <DataGridTextColumn Binding="{Binding Naam}" Header="Naam"/>
                             <DataGridTextColumn Binding="{Binding Prijs}" Header="Prijs Model"/>

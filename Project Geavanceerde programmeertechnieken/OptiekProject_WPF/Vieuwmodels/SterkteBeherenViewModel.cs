@@ -107,7 +107,7 @@ namespace OptiekProject_WPF.VieuwModels
                         MessageBox.Show("U kunt geen nieuwe stertke aanmaken terwijl u bezig bent met een bestaande sterkte te bewerken.");
                     }
                     break;
-                case "SterkteEdit":
+                case "SterkteE dit":
                     if (SelectedSterkteClass != null)
                     {
                         if (sterkteText != "" && sterkteText != null && decimal.TryParse(prijsText, out decimal result))

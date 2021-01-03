@@ -38,6 +38,8 @@ namespace OptiekProject_WPF.VieuwModels
         public ObservableCollection<Kleur> kleuren { get; set; }
         public ObservableCollection<Sterkte> sterktes { get; set; }
         public Merk GeselecteerdeMerk { get; set; }
+        public Merk geenSelectie { get; set; }
+        public BrilType geenSelectietype { get; set; }
         public ObservableCollection<BrilType> Briltypes { get; set; }
         public BrilType GeselecteerdeBriltype { get; set; }
         public ObservableCollection<Model> AlleModellen { get; set; }
@@ -52,6 +54,8 @@ namespace OptiekProject_WPF.VieuwModels
                 {
                     SelecteerdeModel = "geen geselecteerd";
                     SelectieIsTrueVisibility = Visibility.Collapsed;
+                    GeselecteerdeMerk = geenSelectie;
+                    GeselecteerdeBriltype = geenSelectietype;
                     SelectieIsTrue = false;
                     SelectieIsFalse = true;
                     NaamText = null;
@@ -61,6 +65,8 @@ namespace OptiekProject_WPF.VieuwModels
                 {
                     SelecteerdeModel = selectedModelClass.Naam;
                     SelectieIsTrueVisibility = Visibility.Visible;
+                    GeselecteerdeMerk = selectedModelClass.Merk;
+                    GeselecteerdeBriltype = selectedModelClass.BrilTypes;
                     SelectieIsTrue = true;
                     SelectieIsFalse = false;
                     NaamText = selectedModelClass.Naam;
@@ -77,16 +83,19 @@ namespace OptiekProject_WPF.VieuwModels
             AlleModellen = new ObservableCollection<Model>(unitOfWork.ModelRepo.Ophalen(x => x.Merk, x => x.BrilTypes));
 
             Merken = new ObservableCollection<Merk>(unitOfWork.MerkRepo.Ophalen());
-            Merk geenSelectie = new Merk();
+            geenSelectie = new Merk();
             geenSelectie.MerkID = -1;
             geenSelectie.Naam = "";
             Merken.Insert(0, geenSelectie);
 
             Briltypes = new ObservableCollection<BrilType>(unitOfWork.BrilTypeRepo.Ophalen());
-            BrilType geenSelectietype = new BrilType();
+            geenSelectietype = new BrilType();
             geenSelectietype.BriltypeID = -1;
             geenSelectietype.Naam = "";
             Briltypes.Insert(0, geenSelectietype);
+
+            GeselecteerdeMerk = geenSelectie;
+            GeselecteerdeBriltype = geenSelectietype;
 
             Modellen = AlleModellen;
             SelecteerdeModel = "geen geselecteerd";
@@ -187,7 +196,7 @@ namespace OptiekProject_WPF.VieuwModels
                                         Sterkte = sterkte,
                                         Korting = 0,
                                         Beschikbaar = true,
-                                        Naam = nieuweModel.Naam + "op sterkte " + sterkte.sterkte
+                                        Naam = nieuweModel.Naam + " op sterkte " + sterkte.sterkte
 
                                     };
                                     if (newbril.IsGeldig())
